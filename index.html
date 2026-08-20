@@ -1,74 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RESPONSIVE || UI DESIGN</title>
-    <link rel="shortcut icon" href="https://tngunungmerbabu.org/wp-content/uploads/2025/08/cropped-cropped-Backup_of_Logo-BTNGMb-corel-vesion-17-1.png">
+    <link
+      rel="shortcut icon"
+      href="https://tngunungmerbabu.org/wp-content/uploads/2025/08/cropped-cropped-Backup_of_Logo-BTNGMb-corel-vesion-17-1.png"
+    />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Header */
+      header {
+        background-color: #001f4d;
+        padding: 10px 15px;
+        position: relative;
+        color: white;
+        width: 100%;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+
+      .logo img {
+        width: auto;
+        height: 40px;
+      }
+
+      .logo h3 {
+        color: #ffffff;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 2px;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
+
+      .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .desktop-nav a:hover {
+        color: #fa8d11;
+      }
+
+      .menu-toggle {
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+      }
+
+      /* hero */
+      section {
+        display: flex;
+        padding: 30px 20px 20px 20px;
+        justify-content: space-between;
+      }
+
+      .hero h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #001f4d;
+      }
+
+      .hero p {
+        padding-bottom: 20px;
+        font-weight: 400;
+      }
+
+      .hero button {
+        padding: 10px 20px;
+        background-color: #fa8d11;
+        color: beige;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      section img {
+        border-radius: 10px;
+      }
+
+      /* Konten Utama */
+      main {
+        padding: 20px;
+      }
+
+      /* Kurikulum */
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px black;
+      }
+
+      .card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .card-info h2 {
+        font-weight: 600;
+        color: #001f4d;
+      }
+
+      .card-info p {
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .card-info button {
+        background: none;
+        border: none;
+        color: #ff9900;
+        font-weight: 500;
+        text-align: left;
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #001f4d;
+        color: white;
+        padding: 30px 20px;
+      }
+
+      footer h2 {
+        font-size: 16px;
+        color: #ff9900;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      footer p {
+        line-height: 1.5;
+        color: #dddddd;
+      }
+
+      footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      footer ul li img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: #ffffff;
+        padding: 5px;
+        display: block;
+      }
+
+      /* Tampilan Desktop */
+      @media (min-width: 768px) {
+        .hamburger {
+          display: none;
         }
+
+        .desktop-nav {
+          display: flex;
+          gap: 25px;
+        }
+
+        section {
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 60px 20px;
+        }
+
+        .hero {
+          text-align: left;
+          max-width: 50%;
+        }
+
+        .hero h1 {
+          font-size: 40px;
+        }
+
+        .card-container {
+          flex-direction: row;
+        }
+
+        .footer-content {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-content > div {
+          flex: 1;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            
-        </nav>
-        <button>PPDB</button>
+      <nav>
+        <div class="logo">
+          <img
+            src="https://tngunungmerbabu.org/wp-content/uploads/2025/08/cropped-cropped-Backup_of_Logo-BTNGMb-corel-vesion-17-1.png"
+            alt="logo sekolah"
+          />
+          <h3>Sekolah kalcer</h3>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="desktop-nav">
+          <a href="#">Beranda</a>
+          <a href="#">Akademik</a>
+          <a href="#">Fasilitas</a>
+          <a href="#">Kontak</a>
+        </div>
+      </nav>
     </header>
 
     <!-- hero -->
-     <section>
-        <h1>Selamat Datang di Sekolah Unggul</h1>
-        <p>Mewujudkan generasi cerdas, berkarakter, dan siap menghadapi masa depan.</p>
+    <section>
+      <div class="hero">
+        <h1>Selamat Datang di <br />Sekolah Unggul</h1>
+        <p>
+          Mewujudkan generasi cerdas, <br />berkarakter, dan siap menghadapi
+          masa depan.
+        </p>
         <button>Daftar Sekarang &rarr;</button>
-     </section>
+      </div>
+      <div class="2">
+        <img
+          src="https://st2.depositphotos.com/1037987/10996/i/450/depositphotos_109964306-stock-photo-male-teacher-listening-to-students.jpg"
+          alt=""
+          width="300px"
+          height="250px"
+        />
+      </div>
+    </section>
 
-     <main>
-        <div>
-            <div>
-                <h2>Akademik</h2>
-                <p>Kurikulum berkualitas dengan <br>metode pembelajaran inovatif <br>untuk prestasi terbaik.</p>
-                <button>Selengkapnya &rarr;</button>
-            </div>
-            <div>
-                <h2>Olahraga</h2>
-                <p>Mengembangkan potensi siswa <br>melalui berbagai kegiatan <br>olahraga dan kompetisi</p>
-                <button>Selengkapnya &rarr;</button>
-            </div>
-            <div>
-                <h2>Seni</h2>
-                <p>Mendukung kreativitas dan bakat <br>siswa di bidang seni dan budaya <br>secara profesional</p>
-                <button>Selengkapnya &rarr;</button>
-            </div>
+    <!-- Konten Utama -->
+    <main>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-info">
+            <h2>Akademik</h2>
+            <p>
+              Kurikulum berkualitas dengan <br />metode pembelajaran inovatif
+              <br />untuk prestasi terbaik.
+            </p>
+            <button>Selengkapnya &rarr;</button>
+          </div>
         </div>
-     </main>
 
-     <!-- Footer -->
-      <footer>
-        <div>
-            <div>
-                <h2>Alamat Sekolah</h2>
-                <p>Perumahan Eco Village Serpong, Mekar Sari, Kec. <br>Rumpin, Kabupaten Bogor, Jawa Barat, 16350</p>
-            </div>
-            <div>
-                <h2>Hubungi Kami</h2>
-                <p>(021) 1234 5678 | pondoktahfizhplusit@abudzar.sch.id</p>
-            </div>
-            <div>
-                <h2>Link Media Sosial</h2>
-            </div>
+        <div class="card">
+          <div class="card-info">
+            <h2>Olahraga</h2>
+            <p>
+              Mengembangkan potensi siswa <br />melalui berbagai kegiatan
+              <br />olahraga dan kompetisi
+            </p>
+            <button>Selengkapnya &rarr;</button>
+          </div>
         </div>
-        <ul>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="fb"></li>
-            <li><img src="https://img.magnific.com/premium-vector/instagram-logo-vector_629132-1540.jpg?semt=ais_test_b&w=740&q=80" alt="ig"></li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=original" alt="yt"></li>
-            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDursvQ3J-nb4PLsksf5VWgDOiGQ_speC3bvulTm-JbSjzt-GvakKvA4&s=10" alt="tiktok"></li>
-        </ul>
-      </footer>
-</body>
+
+        <div class="card">
+          <div class="card-info">
+            <h2>Seni</h2>
+            <p>
+              Mendukung kreativitas dan bakat <br />siswa di bidang seni dan
+              budaya <br />secara profesional
+            </p>
+            <button>Selengkapnya &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <div>
+          <h2>Alamat Sekolah</h2>
+          <p>
+            Perumahan Eco Village Serpong, Mekar Sari, Kec. <br />Rumpin,
+            Kabupaten Bogor, Jawa Barat, 16350
+          </p>
+        </div>
+        <div>
+          <h2>Hubungi Kami</h2>
+          <p>(021) 1234 5678 | pondoktahfizhplusit@abudzar.sch.id</p>
+        </div>
+        <div>
+          <h2>Link Media Sosial</h2>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+            alt="fb"
+          />
+        </li>
+        <li>
+          <img
+            src="https://img.magnific.com/premium-vector/instagram-logo-vector_629132-1540.jpg?semt=ais_test_b&w=740&q=80"
+            alt="ig"
+          />
+        </li>
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=original"
+            alt="yt"
+          />
+        </li>
+        <li>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDursvQ3J-nb4PLsksf5VWgDOiGQ_speC3bvulTm-JbSjzt-GvakKvA4&s=10"
+            alt="tiktok"
+          />
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
